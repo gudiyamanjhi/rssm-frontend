@@ -1,0 +1,89 @@
+.chart-box {
+    margin: 10px;
+    background-color: aliceblue;
+    box-shadow: 1px 1px 10px;
+    padding: 10px;
+}
+
+.image {
+    width: 45%;
+    margin-top: 12px;
+    margin-left: 67px;
+
+}
+
+
+
+.newmain {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+}
+
+/* Header Fixed */
+.newheader {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    height: 70px;
+    background: white;
+    z-index: 1000;
+}
+
+/* Outlet Content */
+.newcontent {
+    margin-top: 70px;
+    padding: 20px;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+}
+
+.sidebar {
+    width: 250px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background-color: #2f6b4f;
+}
+
+.too li a {
+    color: white;
+    text-decoration: none;
+    /* padding-top: 10px; */
+}
+
+.sidebar ul li {
+    list-style-type: none;
+    border: 1px solid;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    width: 70%;
+    margin:15px auto;
+    padding: 10px 12px;
+    
+}
+
+.sidebar h1 {
+    margin-bottom: 40px;
+    padding: 10px;
+    font-size: 40px;
+}
+
+/* CArds  */
+.dash-cards{
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    width: 25%;
+    height: 70px;
+}
+.dash-stats{
+    display: flex;
+    justify-content: space-around;
+}
+.dashboard-page{
+    padding-top: 20px;
+}
