@@ -25,7 +25,7 @@ const TeacherDetails = () => {
 
     useEffect(() => {
         getTeachers();
-    }, [id])
+    })
 
     async function deleteteacher(id) {
         const res = await axios.delete(`http://localhost:8000/teacher/deleteTeacher/${id}`)
