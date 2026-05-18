@@ -19,7 +19,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         // localStorage.setItem("user", JSON.stringify(data))
-        const senddata = await axios.post("http://localhost:8000/users/signup", data).then((res) => {
+         await axios.post("http://localhost:8000/users/signup", data).then((res) => {
             console.log(res)
             if (res.data.status) {
                 toast.success("Suucessful signup")

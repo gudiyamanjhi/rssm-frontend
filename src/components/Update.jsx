@@ -1,12 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import  { Toaster } from "react-hot-toast";
 
 function Update({ detailstudent, setUpdate }) {
 
     const [image, setImage] = useState()
     const [stdata, setFormData] = useState()
-    console.log(detailstudent)
     const [firstname, setFirstName] = useState(detailstudent?.firstname)
 
     const [lastname, setLastName] = useState(detailstudent?.lastname)
@@ -32,39 +31,11 @@ function Update({ detailstudent, setUpdate }) {
     const handleSubmit = async (e) => {
         const id=detailstudent?._id
         e.preventDefault();
-        const res=await axios.post(`http://localhost:8000/student/updatestudent/${id}`,{firstname,lastname,email,fathername,mothername,className,Age,address,State,mobileno
+       await axios.post(`http://localhost:8000/student/updatestudent/${id}`,{firstname,lastname,email,fathername,mothername,className,Age,address,State,mobileno
         }).then((res) => {
             console.log(res)
             //  setFirstName(res.data.firstName);
         })
-        // const fdata = new FormData()
-        // fdata.append("firstName", stdata.firstName);
-        // fdata.append("lastName", stdata.lastName);
-        // fdata.append("fatherName", stdata.fatherName);
-        // fdata.append("mothername", stdata.mothername);
-        // fdata.append("className", stdata.className);
-        // fdata.append("duration", stdata.duration);
-        // fdata.append("email", stdata.email);
-        // fdata.append("address", stdata.address);
-        // fdata.append("gender", stdata.gender);
-        // fdata.append("mobile", stdata.mobile);
-        // fdata.append("Age", stdata.Age);
-        // fdata.append("State", stdata.State);
-        // fdata.append("image", image);
-
-        // console.log(fdata);
-
-
-        // // const handleSubmit = async (e) => {
-        // // e.preventDefault();
-        // const res = await axios.post("http://localhost:8000/registerform", {fdata}).then((res) => {
-        //     console.log(res.data.status)
-        //     if (res.data.status) {
-        //         toast.success(res.data.message)
-        //     } else {
-        //         toast.error(res.data.message)
-        //     }
-        // })
 
     };
 
@@ -137,6 +108,7 @@ function Update({ detailstudent, setUpdate }) {
                             type="file"
                             name="text"
                             id=""
+                            value={image}
                             onChange={(e) => setImage(e.target.files[0])}
 
                         />

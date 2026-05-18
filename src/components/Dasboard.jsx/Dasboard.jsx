@@ -1,23 +1,23 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import {Outlet } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Aside from "./Aside";
 import "./Dashboard.css"
 
 
 function Dashboard({ children }) {
-    const [allStudents, setAllStudents] = useState([])
-    const [BCA, setBCA] = useState({})
-    const [MCA, setMCA] = useState({})
-    const [BA, setBA] = useState({})
-    const [BCOM, setBCOM] = useState({})
-    const [MCOM, setMCOM] = useState({})
+    // const [allStudents, setAllStudents] = useState([])
+    // const [BCA, setBCA] = useState({})
+    // const [MCA, setMCA] = useState({})
+    // const [BA, setBA] = useState({})
+    // const [BCOM, setBCOM] = useState({})
+    // const [MCOM, setMCOM] = useState({})
 
     async function getStudents() {
-        const res = await axios.get("http://localhost:8000/student/allStudents").then((res) => {
+        await axios.get("http://localhost:8000/student/allStudents").then((res) => {
             console.log(res.data.user)
-            setAllStudents(res.data.user)
+            // setAllStudents(res.data.user)
             // const students = res.data.user
             // const bcaStudents = students.filter((item) => item.className == "BCA")
             // setBCA(bcaStudents)
@@ -43,7 +43,7 @@ function Dashboard({ children }) {
     return (
         <>
             <div style={{ display: "flex", height: "100vh", }}>
-                <div className="sidebar" style={{zIndex:999}}>
+                <div className="sidebar" style={{ zIndex: 999 }}>
                     <Aside />
                 </div>
 

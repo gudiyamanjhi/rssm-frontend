@@ -19,19 +19,16 @@ const StudentDetail = () => {
         const res = await axios.get("http://localhost:8000/student/allStudents")
         console.log(res.data.user)
         const studentData = res.data.user
-        const findStudent = await studentData.find((item) => item._id == id)
+        const findStudent = await studentData.find((item) => item._id === id)
         setdetailStudent(findStudent)
         console.log(findStudent)
     }
 
     useEffect(() => {
         getStudents();
-    }, [])
-
+    })
 
     async function deletestudent(id) {
-        console.log("delete", id)
-
         const res = await axios.delete(`http://localhost:8000/student/deleteStudent/${id}`)
         if (res.data.status) {
             Navigate("/")
@@ -59,7 +56,7 @@ const StudentDetail = () => {
                             {detailstudent?.firstname} {detailstudent?.lastname}
                         </h2>
 
-                       
+
                     </div>
 
                     {/* Right Details Section */}
@@ -109,21 +106,21 @@ const StudentDetail = () => {
                                 <p>{detailstudent?.gender}</p>
                             </div>
 
-                           
+
                             <div className="info-box">
                                 <span>State</span>
                                 <p>{detailstudent?.State}</p>
                             </div>
-                              <div className="info-box">
+                            <div className="info-box">
                                 <span>className</span>
                                 <p>{detailstudent?.className}</p>
                             </div>
-                             <div className="info-box full-width">
+                            <div className="info-box full-width">
                                 <span>Address</span>
                                 <p>{detailstudent?.address}</p>
                             </div>
 
-                            
+
 
                         </div>
 

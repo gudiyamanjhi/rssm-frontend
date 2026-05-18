@@ -19,7 +19,7 @@ function Login() {
       e.preventDefault();
       console.log("start")
 
-      const senddata = await axios.post("http://localhost:8000/users/login", data).then((res) => {
+      await axios.post("http://localhost:8000/users/login", data).then((res) => {
          console.log(res.data.status)
          if (res.data.status) {
             localStorage.setItem("nspl", JSON.stringify(res.data.user))

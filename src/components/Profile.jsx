@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import pro from "../components/img/u.jpg";
-import ProfileUpdate from "./ProfileUpdate"
 import axios from "axios";
 
 function Profile() {
@@ -17,7 +15,7 @@ function Profile() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:8000/users/updateProfile", { name, email, phoneno, address, city, state }).then((res) => {
+    await axios.post("http://localhost:8000/users/updateProfile", { name, email, phoneno, address, city, state }).then((res) => {
       console.log(res)
       localStorage.setItem("nspl", JSON.stringify(res.data.user))
     })

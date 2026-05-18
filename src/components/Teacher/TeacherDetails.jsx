@@ -8,7 +8,6 @@ const TeacherDetails = () => {
 
     const Navigate = useNavigate()
     const { id } = useParams()
-    console.log(id)
     let [detailteacher, setdetailTeacher] = useState({})
     console.log(detailteacher)
 
@@ -19,7 +18,7 @@ const TeacherDetails = () => {
         const res = await axios.get("http://localhost:8000/teacher/allTeachers")
         console.log(res.data.user)
         const teacherData = res.data.user
-        const findTeacher = await teacherData.find((item) => item._id == id)
+        const findTeacher = await teacherData.find((item) => item._id === id)
         setdetailTeacher(findTeacher)
         console.log(findTeacher)
     }
@@ -29,8 +28,6 @@ const TeacherDetails = () => {
     }, [id])
 
     async function deleteteacher(id) {
-        console.log("delete", id)
-
         const res = await axios.delete(`http://localhost:8000/teacher/deleteTeacher/${id}`)
         if (res.data.status) {
             Navigate("/")

@@ -4,8 +4,6 @@ import Rssm from "../Dasboard.jsx/image/rssm.png"
 import "./Dashboard.css"
 
 function Aside() {
-
-
     const nav = useNavigate()
     function logout() {
         localStorage.removeItem("nsplAuth")
@@ -15,7 +13,7 @@ function Aside() {
         <>
             <div>
                 <div className='image'>
-                    <Link to={"/"}> <img src={Rssm} width={"100%"} /></Link>
+                    <Link to={"/"}> <img src={Rssm} width={"100%"} alt='logo' /></Link>
                 </div>
                 <ul className='too'>
 

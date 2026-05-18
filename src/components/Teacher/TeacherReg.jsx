@@ -30,11 +30,7 @@ function TeacherReg() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(image)
-    console.log(teacher)
-
     const formData = new FormData();
-
     formData.append("firstname", teacher.firstname);
     formData.append("lastname", teacher.lastname);
     formData.append("fathername", teacher.fathername);
@@ -47,7 +43,7 @@ function TeacherReg() {
     formData.append("image", image);
 
 
-    const res = await axios.post("http://localhost:8000/teacher/registerform", formData, {
+    await axios.post("http://localhost:8000/teacher/registerform", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       }
@@ -59,7 +55,6 @@ function TeacherReg() {
         toast.error(res.data.message)
       }
     })
-
   };
 
 

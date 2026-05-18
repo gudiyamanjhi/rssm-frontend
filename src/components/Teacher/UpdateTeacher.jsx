@@ -1,13 +1,10 @@
 import axios from "axios";
-import React, { useState, useEffect, } from "react";
-import toast, { Toaster } from "react-hot-toast";
-// import { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { Toaster } from "react-hot-toast";
 
 function UpdateTeacher({ detailteacher, setUpdateTeacher }) {
 
     const [image, setImage] = useState()
-    const [teacher, setTeacherForm] = useState()
-    console.log(detailteacher)
 
     const [firstname, setFirstName] = useState(detailteacher?.firstname)
     console.log(firstname)
@@ -18,25 +15,18 @@ function UpdateTeacher({ detailteacher, setUpdateTeacher }) {
     const [age, setAge] = useState(detailteacher?.age)
     const [contact, setContact] = useState(detailteacher?.contact)
 
-    const handleChange = (e) => {
-        setTeacherForm({ ...teacher, [e.target.name]: e.target.value });
-    };
-
-
     const handleSubmit = async (e) => {
         const id = detailteacher?._id
         e.preventDefault();
-        const res = await axios.post(`http://localhost:8000/teacher/updateTeacher/${id}`, {
+        await axios.post(`http://localhost:8000/teacher/updateTeacher/${id}`, {
             firstname, lastname, email, fathername, mothername, age, contact,
         }).then((res) => {
             console.log(res)
 
         })
-
-
     };
 
-   
+
     return (
         <>
             <Toaster />
@@ -88,6 +78,7 @@ function UpdateTeacher({ detailteacher, setUpdateTeacher }) {
                             type="file"
                             name="text"
                             id=""
+                            value={image}
                             onChange={(e) => setImage(e.target.files[0])}
 
                         />
@@ -116,12 +107,6 @@ function UpdateTeacher({ detailteacher, setUpdateTeacher }) {
                             onChange={(e) => setContact(e.target.value)}
                             value={contact}
                         ></textarea>
-
-
-
-
-
-
                         <div className="on">
                             <button type="submit" className="st">Submit</button>
                             <button type="submit" className="st" onClick={() => setUpdateTeacher(false)}>close</button>

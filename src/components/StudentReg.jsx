@@ -32,8 +32,6 @@ function StudentForm() {
     const handleSubmit = async (e) => {
         // const currentDate = new Date().toLocaleDateString();
         e.preventDefault();
-        console.log(stdata)
-        console.log(image)
         const fdata = new FormData()
         fdata.append("firstName", stdata.firstName);
         fdata.append("lastName", stdata.lastName);
@@ -50,14 +48,8 @@ function StudentForm() {
         fdata.append("admissionDate", stdata.admissionDate);
         fdata.append("admissionMonth", stdata.admissionMonth)
         fdata.append("image", image);
-        // for (let pair of fdata.entries()) {
-        //     console.log(pair[0], pair[1]);
-        // }
 
-
-        // const handleSubmit = async (e) => {
-        // e.preventDefault();
-        const res = await axios.post("http://localhost:8000/student/registerform", fdata, {
+        await axios.post("http://localhost:8000/student/registerform", fdata, {
             headers: {
                 "Content-Type": "multipart/form-data",
             }
