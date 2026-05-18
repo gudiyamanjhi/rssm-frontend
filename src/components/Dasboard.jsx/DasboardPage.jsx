@@ -7,27 +7,26 @@ function DasboardPage() {
 
     const [allStudents, setAllStudents] = useState([])
     const [allTeachers, setAllTeachers] = useState([])
+
     async function getStudents() {
         try {
             const res = await axios.get("http://localhost:8000/student/allStudents");
             setAllStudents(res.data.user);
-
         } catch (error) {
             console.log(error);
         }
-        const totalStudents = allStudents.length
-    }; 
-    
+    };
+
     async function getTeacher() {
-        const res = await axios.get("http://localhost:8000/teacher/allTeachers").then((res) => {
+        await axios.get("http://localhost:8000/teacher/allTeachers").then((res) => {
             // console.log(res.data.user)
             setAllTeachers(res.data.user)
         });
-        const totalTrachers = allTeachers.length
     };
 
     useEffect(() => {
         getStudents()
+        getTeacher()
     }, [])
 
     // Chart Data
@@ -52,7 +51,6 @@ function DasboardPage() {
     return (
         <>
             <div className='dashboard-page'>
-
                 <h1 style={{
                     textAlign: "center",
                     margin: "10px 0px",
@@ -71,12 +69,10 @@ function DasboardPage() {
 
                     <div className="dash-cards">
                         <h5>All TEACHERS</h5>
-                         <h2>{allTeachers.length}</h2>
+                        <h2>{allTeachers.length}</h2>
                     </div>
 
                     <div className="dash-cards">
-                        <h5></h5>
-                        {/* <h2>{allStudents.length}</h2> */}
                     </div>
 
                 </div>

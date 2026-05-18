@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from "react-router-dom";
-import Profile from '../Profile';
+import { Link } from "react-router-dom";
+// import Profile from '../Profile';
 
 
 function Header() {
@@ -12,12 +12,6 @@ function Header() {
         setUser(saveuser);
     }, []);
 
-
-    const nav = useNavigate()
-    function logout() {
-        localStorage.removeItem("nsplAuth")
-        nav("/login")
-    }
     return (
         <>
             <div className="header" style={{ width: "98%", height: "65px", padding: "10px 11px", position: "sticky", top: "0" }}>
