@@ -26,7 +26,7 @@ function Aside() {
                     <li><Link to={"/teacherReg"} >Teachers Form</Link></li>
                     <li><Link to={"/studentform"}>Student Form</Link></li>
                 </ul>
-            </div>,
+            </div>
             <div className='outs'>
                 <button onClick={logout}>Logout</button>
             </div>
