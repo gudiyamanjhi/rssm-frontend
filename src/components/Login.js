@@ -9,6 +9,7 @@ function Login() {
 
    const [data, setData] = useState()
    const nav = useNavigate()
+   const [loading, setLoading] = useState(false)
 
    const handleChange = (e) => {
       setData({
@@ -18,17 +19,21 @@ function Login() {
    };
    const handleSubmit = async (e) => {
       e.preventDefault();
+      setLoading(true)
       await Api.post("/users/login", data).then((res) => {
          console.log(res.data.status)
          if (res.data.status) {
             localStorage.setItem("nspl", JSON.stringify(res.data.user))
             toast.success("successfull Login")
             localStorage.setItem("nsplAuth", "true")
+            setLoading(false)
             setTimeout(() => {
                nav("/")
             }, 2000);
+
          } else {
             toast.error(res.data.message)
+            setLoading(false)
          }
       });
 
@@ -58,7 +63,7 @@ function Login() {
                      <input type="password" name="password" id="" onChange={handleChange} />
                   </div>
 
-                  <button type="submit" >Login</button>
+                  {loading ? <button type="submit" >Loadingg......</button> : <button type="submit" >Login</button>}
                   <p style={{ paddingTop: "20px", paddingLeft: "60px" }}>
                      Don't have an account? <Link to={"/signup"}>Sign up</Link>
                   </p>
