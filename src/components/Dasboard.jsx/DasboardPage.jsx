@@ -113,7 +113,7 @@ function DasboardPage() {
                             series={[
                                 {
                                     dataKey: "count",
-                                    label: "Students",
+                                    label: "Teacher",
                                     curve: "natural",
                                     area: true,
                                     color: "green"

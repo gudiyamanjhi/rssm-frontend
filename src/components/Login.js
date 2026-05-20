@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 // import Signup from "./Signup";
-import axios from "axios";
+// import axios from "axios";
 import toast, { Toaster } from "react-hot-toast"
+import Api from "./API/Api";
 
 function Login() {
 
@@ -19,7 +20,7 @@ function Login() {
       e.preventDefault();
       console.log("start")
 
-      await axios.post("http://localhost:8000/users/login", data).then((res) => {
+      await  Api.post("/login", data).then((res) => {
          console.log(res.data.status)
          if (res.data.status) {
             localStorage.setItem("nspl", JSON.stringify(res.data.user))

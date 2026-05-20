@@ -15,7 +15,7 @@ function Profile() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8000/users/updateProfile", { name, email, phoneno, address, city, state }).then((res) => {
+    await axios.post("https://rssm-backend.vercel.app/users/updateProfile", { name, email, phoneno, address, city, state }).then((res) => {
       console.log(res)
       localStorage.setItem("nspl", JSON.stringify(res.data.user))
     })

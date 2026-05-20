@@ -1,7 +1,8 @@
 import { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
+import Api from "./API/Api";
 
 
 const Signup = () => {
@@ -19,7 +20,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         // localStorage.setItem("user", JSON.stringify(data))
-         await axios.post("http://localhost:8000/users/signup", data).then((res) => {
+         await Api.post("/signup", data).then((res) => {
             console.log(res)
             if (res.data.status) {
                 toast.success("Suucessful signup")

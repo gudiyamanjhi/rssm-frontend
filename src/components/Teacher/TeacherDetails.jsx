@@ -15,7 +15,7 @@ const TeacherDetails = () => {
 
 
     async function getTeachers() {
-        const res = await axios.get("http://localhost:8000/teacher/allTeachers")
+        const res = await axios.get("https://rssm-backend.vercel.app/teacher/allTeachers")
         console.log(res.data.user)
         const teacherData = res.data.user
         const findTeacher = await teacherData.find((item) => item._id === id)
@@ -28,7 +28,7 @@ const TeacherDetails = () => {
     })
 
     async function deleteteacher(id) {
-        const res = await axios.delete(`http://localhost:8000/teacher/deleteTeacher/${id}`)
+        const res = await axios.delete(`https://rssm-backend.vercel.app/teacher/deleteTeacher/${id}`)
         if (res.data.status) {
             Navigate("/")
         }
