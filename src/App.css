@@ -2,6 +2,114 @@
   margin: 0px;
   padding: 0px;
   /* margin: auto; */
+}/* ========================= RESPONSIVE ========================= */
+
+@media screen and (max-width: 1024px) {
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .student-card,
+  .profile-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .profile-left,
+  .profile-right,
+  .profile-section,
+  .info-section {
+    width: 100%;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: span 1;
+  }
+
+  .form-update {
+    position: static;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media screen and (max-width: 768px) {
+
+  .card,
+  .signup-card,
+  .login-box,
+  .form-card,
+  .container,
+  .page {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .row,
+  .profile-group,
+  .up,
+  .on {
+    flex-direction: column;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    width: 100%;
+  }
+
+  button {
+    margin-left: 0;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .student-card {
+    height: auto;
+  }
+
+  .profile-left img,
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .title,
+  .profile-title {
+    font-size: 22px;
+  }
+
+  .form-card {
+    margin-top: 20px;
+  }
 }
 
 

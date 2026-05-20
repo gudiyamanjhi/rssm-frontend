@@ -21,7 +21,6 @@ function Login() {
       e.preventDefault();
       setLoading(true)
       await Api.post("/users/login", data).then((res) => {
-         console.log(res.data.status)
          if (res.data.status) {
             localStorage.setItem("nspl", JSON.stringify(res.data.user))
             toast.success("successfull Login")
