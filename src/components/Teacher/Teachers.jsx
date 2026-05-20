@@ -1,6 +1,7 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Api from "../API/Api";
 
 // import { Link,Navigate } from "react-router-dom";
 
@@ -9,7 +10,7 @@ function Teachers() {
     const [allTeachers, setAllTeachers] = useState([])
 
     async function getTeacher() {
-        await axios.get("http://localhost:8000/teacher/allTeachers").then((res) => {
+        await Api.get("/teacher/allTeachers").then((res) => {
             console.log(res.data.user)
             setAllTeachers(res.data.user)
         });

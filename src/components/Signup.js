@@ -20,7 +20,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         // localStorage.setItem("user", JSON.stringify(data))
-         await Api.post("/signup", data).then((res) => {
+         await Api.post("users/signup", data).then((res) => {
             console.log(res)
             if (res.data.status) {
                 toast.success("Suucessful signup")

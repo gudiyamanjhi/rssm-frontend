@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { BarChart } from '@mui/x-charts/BarChart';
-import axios from 'axios';
+// import axios from 'axios';
 import { LineChart } from '@mui/x-charts/LineChart';
+import Api from '../API/Api';
 
 function DasboardPage() {
 
@@ -10,7 +11,7 @@ function DasboardPage() {
 
     async function getStudents() {
         try {
-            const res = await axios.get("http://localhost:8000/student/allStudents");
+            const res = await Api.get("/student/allStudents");
             setAllStudents(res.data.user);
         } catch (error) {
             console.log(error);
@@ -18,7 +19,7 @@ function DasboardPage() {
     };
 
     async function getTeacher() {
-        await axios.get("http://localhost:8000/teacher/allTeachers").then((res) => {
+        await Api.get("/teacher/allTeachers").then((res) => {
             // console.log(res.data.user)
             setAllTeachers(res.data.user)
         });

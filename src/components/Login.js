@@ -18,9 +18,7 @@ function Login() {
    };
    const handleSubmit = async (e) => {
       e.preventDefault();
-      console.log("start")
-
-      await  Api.post("/login", data).then((res) => {
+      await Api.post("/users/login", data).then((res) => {
          console.log(res.data.status)
          if (res.data.status) {
             localStorage.setItem("nspl", JSON.stringify(res.data.user))

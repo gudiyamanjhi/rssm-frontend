@@ -1,6 +1,7 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Api from "./API/Api";
 
 // import { Link,Navigate } from "react-router-dom";
 
@@ -9,7 +10,7 @@ function Student() {
     const [allStudents, setAllStudents] = useState([])
 
     async function getStudents() {
-        await axios.get("http://localhost:8000/student/allStudents").then((res) => {
+        await Api.get("/student/allStudents").then((res) => {
             console.log(res.data.user)
             setAllStudents(res.data.user)
         });

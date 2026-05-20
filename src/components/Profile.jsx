@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import pro from "../components/img/u.jpg";
-import axios from "axios";
+// import axios from "axios";
+import Api from "./API/Api";
 
 function Profile() {
 
@@ -15,7 +16,7 @@ function Profile() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("https://rssm-backend.vercel.app/users/updateProfile", { name, email, phoneno, address, city, state }).then((res) => {
+    await Api.post("/users/updateProfile", { name, email, phoneno, address, city, state }).then((res) => {
       console.log(res)
       localStorage.setItem("nspl", JSON.stringify(res.data.user))
     })

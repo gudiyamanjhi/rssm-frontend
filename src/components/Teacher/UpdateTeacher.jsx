@@ -1,6 +1,7 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useState } from "react";
 import { Toaster } from "react-hot-toast";
+import Api from "../API/Api";
 
 function UpdateTeacher({ detailteacher, setUpdateTeacher }) {
 
@@ -18,7 +19,7 @@ function UpdateTeacher({ detailteacher, setUpdateTeacher }) {
     const handleSubmit = async (e) => {
         const id = detailteacher?._id
         e.preventDefault();
-        await axios.post(`http://localhost:8000/teacher/updateTeacher/${id}`, {
+        await Api.post(`/teacher/updateTeacher/${id}`, {
             firstname, lastname, email, fathername, mothername, age, contact,
         }).then((res) => {
             console.log(res)

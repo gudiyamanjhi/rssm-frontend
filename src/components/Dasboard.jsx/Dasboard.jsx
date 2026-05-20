@@ -1,9 +1,10 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Aside from "./Aside";
 import "./Dashboard.css"
+import Api from "../API/Api";
 
 
 function Dashboard({ children }) {
@@ -15,7 +16,7 @@ function Dashboard({ children }) {
     // const [MCOM, setMCOM] = useState({})
 
     async function getStudents() {
-        await axios.get("http://localhost:8000/student/allStudents").then((res) => {
+        await Api.get("/student/allStudents").then((res) => {
             console.log(res.data.user)
             // setAllStudents(res.data.user)
             // const students = res.data.user

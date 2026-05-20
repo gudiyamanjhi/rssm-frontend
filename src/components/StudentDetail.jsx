@@ -1,8 +1,9 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 // import Update from "./Auther/Update"
 import Update from "./Update";
+import Api from "./API/Api";
 
 
 const StudentDetail = () => {
@@ -16,7 +17,7 @@ const StudentDetail = () => {
     const [updata, setUpdate] = useState(null)
 
     async function getStudents() {
-        const res = await axios.get("http://localhost:8000/student/allStudents")
+        const res = await Api.get("/student/allStudents")
         console.log(res.data.user)
         const studentData = res.data.user
         const findStudent = await studentData.find((item) => item._id === id)
@@ -29,7 +30,7 @@ const StudentDetail = () => {
     })
 
     async function deletestudent(id) {
-        const res = await axios.delete(`http://localhost:8000/student/deleteStudent/${id}`)
+        const res = await Api.delete(`/student/deleteStudent/${id}`)
         if (res.data.status) {
             Navigate("/")
         }

@@ -1,6 +1,7 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import Api from "./API/Api";
 
 function StudentForm() {
 
@@ -49,7 +50,7 @@ function StudentForm() {
         fdata.append("admissionMonth", stdata.admissionMonth)
         fdata.append("image", image);
 
-        await axios.post("http://localhost:8000/student/registerform", fdata, {
+        await Api.post("/student/registerform", fdata, {
             headers: {
                 "Content-Type": "multipart/form-data",
             }

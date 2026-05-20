@@ -1,7 +1,8 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import UpdateTeacher from "./UpdateTeacher";
+import Api from "../API/Api";
 
 
 const TeacherDetails = () => {
@@ -15,7 +16,7 @@ const TeacherDetails = () => {
 
 
     async function getTeachers() {
-        const res = await axios.get("https://rssm-backend.vercel.app/teacher/allTeachers")
+        const res = await Api.get("/teacher/allTeachers")
         console.log(res.data.user)
         const teacherData = res.data.user
         const findTeacher = await teacherData.find((item) => item._id === id)
@@ -28,7 +29,7 @@ const TeacherDetails = () => {
     })
 
     async function deleteteacher(id) {
-        const res = await axios.delete(`https://rssm-backend.vercel.app/teacher/deleteTeacher/${id}`)
+        const res = await Api.delete(`/teacher/deleteTeacher/${id}`)
         if (res.data.status) {
             Navigate("/")
         }
