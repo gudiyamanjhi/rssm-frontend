@@ -1252,41 +1252,61 @@ tr:nth-child(even) {
   }
 }
 
-@media screen and (max-width:768px){
 
-  .student-card,
-  .profile-card,
-  .row,
-  .profile-group,
-  .up,
-  .on{
-    flex-direction: column;
-  }
+
+@media (max-width: 768px) {
 
   .card,
   .signup-card,
   .login-box,
   .form-card,
   .container,
-  .page{
-    width:90% !important;
-    margin:auto;
+  .page {
+    width: 95%;
+    padding: 15px;
   }
 
-  input,
-  button,
-  textarea,
-  select{
-    width:100%;
+  .row,
+  .up,
+  .profile-group,
+  .details-grid {
+    flex-direction: column;
+    display: flex;
   }
 
   .student-card,
-  .profile-card{
-    height:auto;
+  .profile-card {
+    flex-direction: column;
+    height: auto;
   }
 
-  table{
-    overflow-x:auto;
-    display:block;
+  .profile-left,
+  .profile-right,
+  .profile-section,
+  .info-section {
+    width: 100%;
   }
+
+  button,
+  .outs button,
+  .profile-btn,
+  .login-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-update {
+    position: static;
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+  }
+
 }
