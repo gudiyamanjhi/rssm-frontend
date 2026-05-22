@@ -1,0 +1,79 @@
+/* ***************************************login************************************* */
+
+/* =========================
+   Tablet Responsive
+========================= */
+@media (max-width: 768px) {
+  .card {
+    max-width: 340px;
+    padding: 25px;
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+
+  .input-group input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   Mobile Responsive
+========================= */
+@media (max-width: 480px) {
+  .main {
+    padding: 15px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 22px 18px;
+    border-radius: 12px;
+  }
+
+  .card h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .input-group {
+    margin-bottom: 18px;
+  }
+
+  .input-group input {
+    padding: 11px;
+    font-size: 14px;
+  }
+
+  .input-group label {
+    font-size: 13px;
+  }
+
+  button {
+    padding: 11px;
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   Small Devices
+========================= */
+@media (max-width: 320px) {
+  .card {
+    padding: 18px 14px;
+  }
+
+  .card h2 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 13px;
+  }
+}
