@@ -3,6 +3,7 @@ import { BarChart } from '@mui/x-charts/BarChart';
 // import axios from 'axios';
 import { LineChart } from '@mui/x-charts/LineChart';
 import Api from '../API/Api';
+import "./Dashboard.css"
 
 function DasboardPage() {
 
@@ -82,7 +83,7 @@ function DasboardPage() {
 
 
 
-                    <div style={{ display: "flex" }}>
+                    <div className="chart-wrapper">
                         <BarChart
                             className='chart-box'
                             dataset={chartData}

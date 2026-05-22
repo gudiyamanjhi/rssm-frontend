@@ -1,5 +1,6 @@
 
 import './App.css';
+import "./Responsive.css";
 import Login from './components/Login';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Signup from './components/Signup';
