@@ -652,28 +652,10 @@ tbody tr:hover {
   background: #f9f9f9;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 600px) {
-  .stats {
-    grid-template-columns: 1fr;
-  }
 
-  .filters {
-    flex-direction: column;
-  }
 
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-}
+
 
 
 
@@ -826,25 +808,7 @@ tbody tr:hover {
 
 /* RESPONSIVE */
 
-@media(max-width: 768px) {
 
-  .student-card {
-    flex-direction: column;
-  }
-
-  .profile-section,
-  .info-section {
-    width: 100%;
-  }
-
-  .details-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .full-width {
-    grid-column: span 1;
-  }
-}
 
 /* ***************************************update******************************************* */
 
@@ -1013,7 +977,7 @@ tbody tr:hover {
 
 .profile-btn {
   margin-top: 20px;
-  width: 100%;
+  width: 76%;
   padding: 14px;
   border: none;
   border-radius: 12px;
@@ -1029,44 +993,6 @@ tbody tr:hover {
   transform: translateY(-2px);
   background: linear-gradient(135deg, #1d4ed8, #1e40af);
 }
-
-/* MOBILE RESPONSIVE */
-
-@media (max-width: 768px) {
-  .profile-card {
-    flex-direction: column;
-  }
-
-  .profile-left {
-    width: 100%;
-    padding: 25px;
-  }
-
-  .profile-right {
-    width: 100%;
-    padding: 25px;
-  }
-
-  .profile-group {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .profile-left img {
-    width: 160px;
-    height: 160px;
-  }
-}
-
-/* ************************************header***************************** */
-
-/* .pro{
-  border: 1px solid;
-  width: 50%;
-  height: 300px;
-  padding-right: 200px;
-  padding-top: 200px;
-} */
 
 
 /* ***********************************************Teachers ***************************** */
@@ -1092,70 +1018,6 @@ tr:nth-child(even) {
   background: #f2f2f2;
 }
 
-/*================================== Aside bar ============================== */
-
-/* *****************************************teacherReg***************************** */
-/* .count{
-
-  width: 100%;
-  height: 500px;
-  background-color: #b2b7b7; 
-}
-.container {
-  border: 1px solid;
-  width: 60%;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background: #ffffff;
-  margin-left: 170px;
-
-}
-
-.headings{
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.row {
-  display: flex;
-  gap: 10px;
-}
-
-.input {
-  flex: 1;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  outline: none;
-  transition: 0.3s;
-}
-
-.input:focus {
-  border-color: #007bff;
-}
-
-.mit {
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  background: #667eea;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.mit:hover {
-  background: #0056b3;
-} */
 
 /* Background */
 .count {
@@ -1233,79 +1095,4 @@ tr:nth-child(even) {
 .mit:hover {
   background: #2a5298;
   transform: scale(1.02);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .row {
-    flex-direction: column;
-  }
-
-  .container {
-    padding: 20px;
-  }
-
-  .headings {
-    font-size: 26px;
-  }
-}
-
-
-
-/* **********************************phone****************************** */
-@media (max-width: 768px) {
-
-  .card,
-  .signup-card,
-  .login-box,
-  .form-card,
-  .container,
-  .page {
-    width: 95%;
-    padding: 15px;
-  }
-
-  .row,
-  .up,
-  .profile-group,
-  .details-grid {
-    flex-direction: column;
-    display: flex;
-  }
-
-  .student-card,
-  .profile-card {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .profile-left,
-  .profile-right,
-  .profile-section,
-  .info-section {
-    width: 100%;
-  }
-
-  button,
-  .outs button,
-  .profile-btn,
-  .login-btn {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  input,
-  select,
-  textarea {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .form-update {
-    position: static;
-    width: 90%;
-    padding: 20px;
-    margin: auto;
-  }
-
 }

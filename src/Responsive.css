@@ -1,79 +1,94 @@
-/* ***************************************login************************************* */
-
-/* =========================
-   Tablet Responsive
-========================= */
 @media (max-width: 768px) {
-  .card {
-    max-width: 340px;
-    padding: 25px;
-  }
-
-  .card h2 {
-    font-size: 24px;
-  }
-
-  .input-group input {
+  .dashboard-page {
     padding: 12px;
-    font-size: 14px;
   }
 
-  button {
-    font-size: 15px;
-  }
-}
-
-/* =========================
-   Mobile Responsive
-========================= */
-@media (max-width: 480px) {
-  .main {
-    padding: 15px;
+  .dash-stats {
+    flex-direction: column;
   }
 
-  .card {
+  .dash-cards {
     width: 100%;
-    padding: 22px 18px;
-    border-radius: 12px;
   }
 
-  .card h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
+  .chart-wrapper {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .input-group {
-    margin-bottom: 18px;
+  .chart-box {
+    width: 100%;
+    min-width: unset;
   }
 
-  .input-group input {
-    padding: 11px;
-    font-size: 14px;
+  .dashboard-page h1 {
+    font-size: 1.4rem;
   }
 
-  .input-group label {
+  .sidebar {
+    display: none;
+  }
+
+  .newmain {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .newcontent {
+    margin-left: 0px;
+  }
+
+  /* Header===== */
+  .logo h2 {
+    font-size: 17px;
+  }
+
+  .logo span {
     font-size: 13px;
   }
 
-  button {
-    padding: 11px;
-    font-size: 14px;
+  .logo {
+    display: none;
   }
+
+  .logoImg {
+    display: block !important;
+  }
+
+  .headerbtn {
+    width: 35% !important;
+    margin-right: 10px;
+    padding: 12px 9px;
+  }
+
+  .img {
+    width: 27% !important;
+    margin-left: 31px !important;
+
+
+  }
+
 }
 
-/* =========================
-   Small Devices
-========================= */
-@media (max-width: 320px) {
-  .card {
-    padding: 18px 14px;
+
+/* ********************************************************** */
+
+
+@media (max-width: 480px) {
+  .dash-cards h2 {
+    font-size: 28px;
   }
 
-  .card h2 {
-    font-size: 20px;
+  .dash-cards h5 {
+    font-size: 16px;
+    /* display: none; */
   }
 
-  button {
-    font-size: 13px;
+  .dashboard-page h1 {
+    font-size: 1.2rem;
+  }
+
+  .sidebar {
+    display: none;
   }
 }

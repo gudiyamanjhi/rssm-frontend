@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 // import Profile from '../Profile';
+import img from "../Dasboard.jsx/image/rssm.png"
 
 
 function Header() {
@@ -19,8 +20,10 @@ function Header() {
                     <Link to={"/"} style={{ color: "white" }}><h2>RSSM PG COLLEGE</h2></Link>
                     <span>Management System</span>
                 </div>
-
-                <button className="" style={{ width: "15%",}}>{user?.name}</button>
+                <div style={{ display: "none" }} className='logoImg'>
+                    <Link to={"/"}><img src={img} alt="" /></Link>
+                </div>
+                <button className="headerbtn" style={{ width: "15%", }}>{user?.name}</button>
 
             </div>
         </>

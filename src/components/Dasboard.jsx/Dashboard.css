@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 body {
@@ -48,7 +48,7 @@ body {
   border-bottom: 1px solid #ddd;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -74,55 +74,20 @@ body {
   border-radius: 10px;
 }
 
-img {
-  width: 57%;
-  margin-left: 56px;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .sidebar {
-    width: 200px;
-    min-width: 200px;
-  }
-
-  .newmain {
-    margin-left: 200px;
-    width: calc(100% - 200px);
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .sidebar {
-    position: absolute;
-    left: -100%;
-  }
-
-  .sidebar.active {
-    left: 0;
-  }
-
-  .newmain {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .newheader {
-    padding: 0 15px;
-  }
-
-  .newcontent {
-    padding: 15px;
-  }
-}
 
 
 
-/* ************************* */
+/* *************************Asidebar******************************* */
 .too {
   list-style: none;
   padding: 10px;
   margin: 0;
+}
+
+
+img {
+  width: 57%;
+  margin-left: 56px;
 }
 
 .too li {
@@ -153,6 +118,9 @@ img {
   transform: translateX(5px);
   border-color: #5a67d8;
   box-shadow: 0 4px 10px rgba(56, 189, 248, 0.3);
+}
+.name{
+  display: none;
 }
 
 /* Active link (NavLink use karne par kaam karega) */
@@ -197,8 +165,7 @@ img {
   border-radius: 14px;
   padding: 25px 20px;
   box-shadow: 0px 4px 12px rgb(20 12 12 / 91%);
-  /* transition: 0.3s ease; */
-  /* border-left: 6px solid #1976d2; */
+  
 }
 
 .dash-cards:hover {
@@ -212,11 +179,7 @@ img {
   font-weight: 600;
 }
 
-/* .dash-cards h2 {
-  margin-top: 12px;
-  font-size: 34px;
-  color: #1976d2;
-} */
+
 
 /* Chart Section */
 .chart-wrapper {
@@ -238,57 +201,3 @@ img {
   overflow-x: auto;
 }
 
-/* Tablet */
-@media (max-width: 992px) {
-  .dashboard-page h1 {
-    font-size: 1.7rem;
-  }
-
-  .dash-cards {
-    min-width: 180px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .dashboard-page {
-    padding: 12px;
-  }
-
-  .dash-stats {
-    flex-direction: column;
-  }
-
-  .dash-cards {
-    width: 100%;
-  }
-
-  .chart-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .chart-box {
-    width: 100%;
-    min-width: unset;
-  }
-
-  .dashboard-page h1 {
-    font-size: 1.4rem;
-  }
-}
-
-/* Small Mobile */
-@media (max-width: 480px) {
-  .dash-cards h2 {
-    font-size: 28px;
-  }
-
-  .dash-cards h5 {
-    font-size: 16px;
-  }
-
-  .dashboard-page h1 {
-    font-size: 1.2rem;
-  }
-}
