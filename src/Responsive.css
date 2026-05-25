@@ -1,4 +1,49 @@
 @media (max-width: 768px) {
+
+  .sidebar {
+    display: none;
+  }
+
+  .mobile-p {
+    position: relative;
+  }
+
+  .menu-mobile {
+    position: absolute;
+    top: 76px;
+    color: #215714;
+    font-size: 36px;
+    left: -20px;
+    display: block;
+    padding: 10px 20px;
+  }
+
+  .menu-close {
+    position: absolute;
+    top: 10px;
+    color: #edeeed;
+    font-size: 25px;
+    left: 185px;
+    display: block;
+    padding: 10px 20px;
+  }
+
+  .sidebar-mobile {
+    width: 250px;
+    min-width: 250px;
+    height: 100vh;
+    background-color: #2f6b4f;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+  }
+
+
+
+
   .dashboard-page {
     padding: 12px;
   }
@@ -8,7 +53,8 @@
   }
 
   .dash-cards {
-    width: 100%;
+    width: 78%;
+    margin-left: 22px;
   }
 
   .chart-wrapper {
@@ -23,10 +69,6 @@
 
   .dashboard-page h1 {
     font-size: 1.4rem;
-  }
-
-  .sidebar {
-    display: none;
   }
 
   .newmain {
@@ -61,34 +103,139 @@
     padding: 12px 9px;
   }
 
-  .img {
+  .imgLogo img {
+    margin-top: 10px !important;
     width: 27% !important;
-    margin-left: 31px !important;
-
-
   }
 
-}
-
-
-/* ********************************************************** */
-
-
-@media (max-width: 480px) {
-  .dash-cards h2 {
-    font-size: 28px;
+  .name {
+    display: block !important;
   }
 
-  .dash-cards h5 {
-    font-size: 16px;
-    /* display: none; */
+
+  /* *****************************student****************************** */
+  .add-btn {
+    width: 90%;
   }
 
-  .dashboard-page h1 {
-    font-size: 1.2rem;
+  .card {
+    padding: 10px;
   }
 
-  .sidebar {
-    display: none;
+  .dashboard {
+    margin-left: 17px;
+  }
+
+
+  /* ****************************student details************************* */
+
+  .profile-img {
+    width: 30% !important;
+    height: 136px !important;
+    margin-right: -3px !important;
+    margin-top: 17px;
+    margin-bottom: -88px;
+  }
+
+  .update-btn {
+    margin-left: -12px;
+  }
+
+  .button-group {
+    margin-top: 10px;
+  }
+
+  .delete-btn {
+    margin-left: 10px;
+  }
+
+  .newcontent {
+    margin-left: -49px !important;
+    margin-right: 10px !important;
+  }
+
+  .student-card {
+    display: block;
+  }
+
+  .student-container {
+    padding: 0px;
+    margin-left: 50px;
+  }
+
+  .profile-section {
+    width: 88%;
+    padding: -20px 30px;
+    height: 55px;
+  }
+
+  .info-box p {
+    font-size: 10px !important;
+  }
+
+  .info-section {
+    /* padding: 0px !important; */
+    margin-top: -50px;
+    text-align: center;
+    margin-left: 30px;
+  }
+
+  .title {
+    margin-bottom: 8px !important;
+    font-size: 28px !important;
+    margin-top: 20px !important;
+  }
+
+  .profile-section h2 {
+    font-size: 20px;
+    padding-top: 98px;
+  }
+
+  /* *****************************************teacherdetails******************** */
+
+  .student-card {
+    margin-left: 5px !important;
+    margin-top: 10px !important;
+  }
+
+  /* **************************************teacherform*************************** */
+
+  .container {
+    margin-left: 82px;
+  }
+
+  /* ********************************** studenteform***************************/
+
+  .form-container {
+    margin-left: 60px;
+  }
+
+
+  /* ************************************profile*********************** */
+
+  .profile-card {
+    display: block;
+  }
+
+  .profile-left {
+    width: 84%;
+  }
+
+  .profile-container {
+    margin-left: 54px;
+  }
+
+  .profile-left img {
+    width: 84px;
+    height: 81px;
+  }
+
+  .profile-btn {
+    margin-left: 40px !important;
+  }
+
+  .profile-title {
+    text-align: center;
+    margin-top: -38px;
   }
 }

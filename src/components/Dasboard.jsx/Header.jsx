@@ -21,7 +21,7 @@ function Header() {
                     <span>Management System</span>
                 </div>
                 <div style={{ display: "none" }} className='logoImg'>
-                    <Link to={"/"}><img src={img} alt="" /></Link>
+                    <Link to={"/"} className='imgLogo'><img src={img} alt="" width={"100%"}/></Link>
                 </div>
                 <button className="headerbtn" style={{ width: "15%", }}>{user?.name}</button>
 
