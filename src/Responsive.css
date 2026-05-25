@@ -205,7 +205,8 @@
 
   .add-btn {
     width: 54% !important;
-    margin-left: 203px !important;
+    margin-left: -68px !important;
+            padding: 10px 34px !important;
   }
 
   /* **************************************teacherform*************************** */
