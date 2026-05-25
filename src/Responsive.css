@@ -138,20 +138,20 @@
   }
 
   .filters {
-    margin-left: 159px;
+    margin-left: 159px !important;
   }
 
   .update-btn {
-    margin-left: 75px;
+    margin-left: 75px !important;
   }
 
   .button-group {
-    margin-top: -91px;
-    padding: 79px;
+    margin-top: -91px !important;
+    padding: 79px !important;
   }
 
   .delete-btn {
-    margin-left: 10px;
+    margin-left: 10px !important;
   }
 
   .newcontent {
@@ -204,8 +204,8 @@
   }
 
   .add-btn {
-    width: 54%;
-    margin-left: 203px;
+    width: 54% !important;
+    margin-left: 203px !important;
   }
 
   /* **************************************teacherform*************************** */
