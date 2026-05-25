@@ -105,7 +105,7 @@
 
   .imgLogo img {
     margin-top: 10px !important;
-    width: 27% !important;
+    width: 100% !important;
   }
 
   .name {
@@ -136,7 +136,8 @@
     margin-top: 17px;
     margin-bottom: -88px;
   }
-  .filters{
+
+  .filters {
     margin-left: -127px;
   }
 
@@ -200,6 +201,11 @@
   .student-card {
     margin-left: 5px !important;
     margin-top: 10px !important;
+  }
+
+  .add-btn {
+    width: 54%;
+    margin-left: 203px;
   }
 
   /* **************************************teacherform*************************** */
