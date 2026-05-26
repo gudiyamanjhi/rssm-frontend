@@ -77,12 +77,12 @@
     width: 100% !important;
   }
 
-  .newcontent {
+  /* .newcontent {
 
     padding: 0px !important;
     margin-top: -100px !important;
     margin-left: -59px !important;
-  }
+  } */
 
   .form-card {
     height: 843px !important;
@@ -216,6 +216,12 @@
   .student-card {
     margin-left: 5px !important;
     margin-top: 10px !important;
+  }
+  .table-container{
+    margin-top: 45px;
+  }
+  table{
+    margin-left: 5px !important;
   }
 
   .add-btn {
