@@ -55,7 +55,7 @@ function Dashboard({ children }) {
                     <Aside />
                 </div>
                 <div className="newmain">
-                    <div className="newheader">
+                    <div className="">
                         <Header />
                     </div>
 

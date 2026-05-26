@@ -493,8 +493,9 @@ button {
   cursor: pointer;
   margin-top: 10px;
   transition: 0.3s;
-  margin-left: 250px;
+  /* margin-left: 279px !important; */
 }
+
 .outs button{
    width: 50%;
   padding: 12px;
@@ -774,8 +775,8 @@ tbody tr:hover {
 .button-group {
   margin-top: 30px;
   display: flex;
-  /* gap: 20px; */
-  margin-left: -171px;
+  gap: 20px;
+  /* margin-left: -171px; */
 }
 
 .update-btn,
