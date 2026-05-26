@@ -54,7 +54,8 @@
 
   .dash-cards {
     width: 78%;
-    margin-left: 22px;
+    margin-left: 51px;
+    /* margin-top: 65px; */
   }
 
   .chart-wrapper {
@@ -82,6 +83,7 @@
     margin-top: -100px !important;
     margin-left: -59px !important;
   }
+
   .form-card {
     height: 843px !important;
   }
@@ -243,6 +245,9 @@
 
   .profile-card {
     display: block !important;
+    margin-left: 67px !important;
+    width: 80% !important;
+    margin-top: 95px !important;
   }
 
   .profile-left {
