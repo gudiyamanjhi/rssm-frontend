@@ -54,8 +54,7 @@
 
   .dash-cards {
     width: 78%;
-    margin-left: 51px;
-    /* margin-top: 65px; */
+    margin-left: 22px;
   }
 
   .chart-wrapper {
@@ -72,20 +71,16 @@
     font-size: 1.4rem;
   }
 
-  .newmain {
+  /* .newmain {
     margin-left: 0 !important;
     width: 100% !important;
-  }
-
-  /* .newcontent {
-
-    padding: 0px !important;
-    margin-top: -100px !important;
-    margin-left: -59px !important;
   } */
 
-  .form-card {
-    height: 843px !important;
+  .newcontent {
+
+    padding: 0px !important;
+    margin-top: -147px !important;
+    margin-left: -59px !important;
   }
 
   /* Header===== */
@@ -217,12 +212,6 @@
     margin-left: 5px !important;
     margin-top: 10px !important;
   }
-  .table-container{
-    margin-top: 45px;
-  }
-  table{
-    margin-left: 5px !important;
-  }
 
   .add-btn {
     width: 100% !important;
@@ -251,9 +240,6 @@
 
   .profile-card {
     display: block !important;
-    margin-left: 67px !important;
-    width: 80% !important;
-    margin-top: 95px !important;
   }
 
   .profile-left {
