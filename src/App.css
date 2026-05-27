@@ -619,6 +619,7 @@ body {
   padding: 10px 15px;
   border-radius: 8px;
   cursor: pointer;
+  width: 100%;
 }
 
 /* TABLE */
