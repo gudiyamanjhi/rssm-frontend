@@ -21,7 +21,6 @@ function DasboardPage() {
 
     async function getTeacher() {
         await Api.get("/teacher/allTeachers").then((res) => {
-            // console.log(res.data.user)
             setAllTeachers(res.data.user)
         });
     };
@@ -32,7 +31,7 @@ function DasboardPage() {
     }, [])
 
     // Chart Data
-    const chartData = allStudents.reduce((acc, student) => {
+    const chartData = allStudents?.reduce((acc, student) => {
         const admissionMonth = student?.admissionMonth;
         const existing = acc.find((item) => item?.admissionMonth === admissionMonth);
 
@@ -66,12 +65,12 @@ function DasboardPage() {
                 <div className="dash-stats">
                     <div className="dash-cards">
                         <h5>Total Students</h5>
-                        <h2>{allStudents.length}</h2>
+                        <h2>{allStudents?.length}</h2>
                     </div>
 
                     <div className="dash-cards">
                         <h5>All TEACHERS</h5>
-                        <h2>{allTeachers.length}</h2>
+                        <h2>{allTeachers?.length}</h2>
                     </div>
 
                     <div className="dash-cards">
