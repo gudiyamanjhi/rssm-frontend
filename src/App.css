@@ -357,7 +357,6 @@ body {
 }
 
 .form-container {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -443,7 +442,6 @@ body {
   width: 100%;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.5s ease-in-out;
-  margin-top: 192px;
 }
 
 .form-card h2 {
@@ -496,8 +494,8 @@ button {
   /* margin-left: 279px !important; */
 }
 
-.outs button{
-   width: 50%;
+.outs button {
+  width: 50%;
   padding: 12px;
   border: none;
   border-radius: 8px;
@@ -584,6 +582,8 @@ body {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  /* margin-top: 100px;
+  margin-bottom: 100px; */
 }
 
 .stats1 {
@@ -678,7 +678,7 @@ tbody tr:hover {
   /* max-width: 1100px; */
   background: white;
   border-radius: 20px;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   height: 550px;
@@ -826,7 +826,7 @@ tbody tr:hover {
   position: absolute;
   top: 130px;
   right: 68px;
-  background: #d3eef1;
+  background: white;
   padding: 58px;
   border-radius: 15px;
   width: 62%;

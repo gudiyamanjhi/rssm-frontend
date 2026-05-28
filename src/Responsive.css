@@ -137,9 +137,14 @@
   }
 
   .card {
-    padding: 10px;
+    padding: 17px;
+    width: 78%;
   }
 
+  .stats1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .table-container {
     padding: 35px !important;
@@ -157,49 +162,21 @@
     margin-bottom: -88px;
   }
 
-  
+
 
   .update-btn {
     margin-left: -1px !important;
   }
 
-  /* .button-group {
-    margin-top: -70px !important;
-    padding: 79px !important;
-  } */
 
   .delete-btn {
     margin-left: 10px !important;
-  }
-
-
-  .student-card {
-    display: block;
-    height: 678px;
-  }
-
-  .student-container {
-    padding: 0px;
-    margin-top: 44px;
-    margin-left: -3px;
-  }
-
-  .profile-section {
-    width: 88% !important;
-    padding: -20px 30px !important;
-    height: 83px !important;
   }
 
   .info-box p {
     font-size: 10px !important;
   }
 
-  .info-section {
-    /* padding: 0px !important; */
-    margin-top: -50px !important;
-    text-align: center !;
-    margin-left: 30px !important;
-  }
 
   .title {
     margin-bottom: 27px !important;
@@ -212,54 +189,74 @@
     padding-top: 98px !important;
   }
 
-
-
-  /* *****************************************teacherdetails******************** */
+  .profile-section {
+    width: 100% !important;
+    padding: 0px !important;
+  }
 
   .student-card {
-    margin-left: 36px !important;
-    margin-top: 24px !important;
+    flex-direction: column;
+    overflow: hidden;
+    height: auto !important;
   }
+
+  .info-section {
+    width: 90% !important;
+    padding: 10px;
+  }
+
+  /* *****************************************teacherdetails******************** */
 
   .add-btn {
     width: 100% !important;
     padding: 11px 28px !important;
   }
 
-  .details-grid {
-    gap: 10px !important;
-  }
-
   /* **************************************teacherform*************************** */
 
   .container {
-    margin-left: 54px !important;
-    margin-top: 203px !important;
+    /* margin-left: 54px !important; */
+    margin-top: 92px !important;
   }
 
   /* ********************************** studenteform***************************/
 
   .form-container {
-    margin-left: 60px !important;
+    padding: 20px;
+  }
+
+  .form-card {
+    margin-bottom: 20px !important;
+  }
+
+  .form-update {
+    position: absolute;
+    top: 130px;
+    right: 68px;
+    background: #d3eef1;
+    padding: 58px;
+    border-radius: 15px;
+    width: 62%;
+    box-shadow: 0 10px 25px rgb(44 41 53 / 88%);
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: -17px;
   }
 
 
   /* ************************************profile*********************** */
 
-  .profile-card {
-    display: block !important;
-  }
+
 
   .profile-left {
-    width: 84% !important;
+    width: auto !important;
+    padding: 40px 0px !important;
   }
 
-  .profile-container {
-    /* margin-left: 54px; */
-    width: 84%;
-    margin-top: 63px !important;
-    margin-left: 50px;
+  .profile-card {
+    flex-direction: column;
   }
+
 
   .profile-left img {
     width: 84px !important;
@@ -281,13 +278,22 @@
   }
 
   .profile-right {
-    width: 93% !important;
-    padding: 4px !important;
+    padding: 0 !important;
+    width: auto !important;
   }
+
 
   /* ***********************************teacherupdate********************** */
 
   .form-update {
-    right: 0px !important;
+    right: 18px !important;
+    top: 84px;
+    position: absolute;
+    background: #d3eef1;
+    border-radius: 15px;
+    width: 70%;
+    box-shadow: 0 10px 25px rgb(44 41 53 / 88%);
+    margin: auto;
+    padding: 35px !important;
   }
 }
