@@ -43,9 +43,6 @@
     transition: all 0.3s ease;
   }
 
-
-
-
   .dashboard-page {
     padding: 12px !important;
   }
@@ -55,10 +52,7 @@
     margin-top: 185px;
   }
 
-  .dash-cards {
-    width: 78%;
-    margin-left: 54px !important;
-  }
+
 
   .chart-wrapper {
     flex-direction: column;
@@ -68,6 +62,7 @@
   .chart-box {
     width: 100%;
     min-width: unset;
+    padding: 0 !important;
   }
 
   .dashboard-page h1 {
@@ -138,7 +133,15 @@
 
   .card {
     padding: 17px;
-    width: 78%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+  }
+  .card h2
+  {
+    margin: 2px 0px;
   }
 
   .stats1 {

@@ -1,13 +1,17 @@
 import { RiMenuUnfoldLine } from "react-icons/ri";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Aside from "./Aside";
 import "./Dashboard.css"
 import { IoMdClose } from "react-icons/io";
+import StudentContext from "../context/StudentContext";
 
 
 function Dashboard({ children }) {
+
+    const user=useContext(StudentContext)
+    console.log(user)
 
     const [open, setOpen] = useState(false)
 

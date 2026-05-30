@@ -19,33 +19,42 @@ import TeacherForm from "./components/Teacher/TeacherReg"
 import Update from './components/Update';
 import UpdateTeacher from './components/Teacher/UpdateTeacher';
 import DasboardPage from './components/Dasboard.jsx/DasboardPage';
+import StudentContext from './components/context/StudentContext';
+import { useState } from 'react';
 
 function App() {
+  
+  const [student,setStudent]=useState("gudiya");
+  console.log(student)
+
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="*" element={<Notfound />} />
+      <StudentContext value={student}>
+        <BrowserRouter>
+          <Routes>
+            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="*" element={<Notfound />} />
 
-          <Route path='/' element={<Dashboard />}>
-            <Route path="" element={<Privteroute><DasboardPage /></Privteroute>} />
-            <Route path="student" element={<Privteroute><Student /></Privteroute>} />
-            <Route path="/studentform" element={<Privteroute><StudentForm /></Privteroute>} />
-            <Route path="/teacherDetails/:id" element={<Privteroute><TeacherDetails /></Privteroute>} />
-             <Route path="/teacherform" element={<Privteroute><TeacherForm /></Privteroute>} />
-            <Route path="/studentDetail/:id" element={<Privteroute><StudentDetail /></Privteroute>} />
-            <Route path="profile" element={<Privteroute><Profile /></Privteroute>} />
-            <Route path="header" element={<Privteroute><Header /></Privteroute>} />
-            <Route path="/teachers" element={<Privteroute><Teachers /></Privteroute>} />
-            <Route path="update" element={<Privteroute><Update /></Privteroute>} />
-             <Route path="updateTeacher" element={<Privteroute><UpdateTeacher /></Privteroute>} />
-            <Route path="teacherReg" element={<Privteroute><TeacherReg /></Privteroute>} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+            <Route path='/' element={<Dashboard />}>
+              <Route path="" element={<Privteroute><DasboardPage /></Privteroute>} />
+              <Route path="student" element={<Privteroute><Student /></Privteroute>} />
+              <Route path="/studentform" element={<Privteroute><StudentForm /></Privteroute>} />
+              <Route path="/teacherDetails/:id" element={<Privteroute><TeacherDetails /></Privteroute>} />
+              <Route path="/teacherform" element={<Privteroute><TeacherForm /></Privteroute>} />
+              <Route path="/studentDetail/:id" element={<Privteroute><StudentDetail /></Privteroute>} />
+              <Route path="profile" element={<Privteroute><Profile /></Privteroute>} />
+              <Route path="header" element={<Privteroute><Header /></Privteroute>} />
+              <Route path="/teachers" element={<Privteroute><Teachers /></Privteroute>} />
+              <Route path="update" element={<Privteroute><Update /></Privteroute>} />
+              <Route path="updateTeacher" element={<Privteroute><UpdateTeacher /></Privteroute>} />
+              <Route path="teacherReg" element={<Privteroute><TeacherReg /></Privteroute>} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </StudentContext>
+
     </>
 
   );

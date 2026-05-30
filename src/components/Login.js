@@ -22,7 +22,7 @@ function Login() {
       setLoading(true)
       await Api.post("/users/login", data).then((res) => {
          if (res.data.status) {
-            localStorage.setItem("nspl", JSON.stringify(res.data.user))
+            localStorage.setItem("tokenAuth", JSON.stringify(res.data.token))
             toast.success("successfull Login")
             localStorage.setItem("nsplAuth", "true")
             setLoading(false)
