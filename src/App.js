@@ -24,7 +24,7 @@ import { useState } from 'react';
 
 function App() {
 
-  // const [student, setStudent] = useState("gudiya");
+  const [student] = useState("gudiya");
 
   return (
     <>
