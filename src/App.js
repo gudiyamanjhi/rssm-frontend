@@ -23,9 +23,8 @@ import StudentContext from './components/context/StudentContext';
 import { useState } from 'react';
 
 function App() {
-  
-  const [student,setStudent]=useState("gudiya");
-  console.log(student)
+
+  const [student, setStudent] = useState("gudiya");
 
   return (
     <>
