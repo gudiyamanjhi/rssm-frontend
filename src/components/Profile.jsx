@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import pro from "../components/img/u.jpg";
 // import axios from "axios";
 import Api from "./API/Api";
+import StudentContext from "./context/StudentContext";
 
 function Profile() {
 
+  const profil=useContext(StudentContext)
+  console.log(StudentContext)
 
   const [user, setUser] = useState({});
   const [name, setName] = useState()
@@ -50,7 +53,7 @@ function Profile() {
             {/* RIGHT SIDE */}
             <div className="profile-right">
 
-              <h2 className="profile-title">User Profile</h2>
+              <h2 className="profile-title">{profil}</h2>
 
               <div className="profile-group">
                 <div className="profile-row">
