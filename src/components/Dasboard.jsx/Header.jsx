@@ -3,9 +3,15 @@ import { Link } from "react-router-dom";
 // import Profile from '../Profile';
 import img from "../Dasboard.jsx/image/rssm.png"
 import StudentContext from '../context/StudentContext';
+import { useUserContext } from '../context/userContext';
 
 
 function Header() {
+
+
+    const { age, setAge } = useUserContext()
+    console.log(age);
+
 
     const study = useContext(StudentContext)
     console.log(study)
